@@ -9,7 +9,7 @@ import {
   type Match,
 } from "./fixtures";
 import { formatDate, formatDuration, formatUsd, matchLabel } from "./format";
-import { LOGO } from "./logo";
+import { LOGO_COLORS, LOGO_LINES, TAGLINE } from "./logo";
 import { predictMatch } from "./predict";
 import {
   buildMatchQueue,
@@ -173,11 +173,15 @@ export function App({ footballDataApiKey }: { footballDataApiKey: string }) {
 
 function Header() {
   return (
-    <Box flexDirection="column">
-      <Text bold color="cyan">
-        {LOGO}
+    <Box flexDirection="column" alignItems="center" marginBottom={1}>
+      {LOGO_LINES.map((line, index) => (
+        <Text key={index} bold color={LOGO_COLORS[index]}>
+          {line}
+        </Text>
+      ))}
+      <Text color="#F7C948" dimColor>
+        {TAGLINE}
       </Text>
-      <Text dimColor>🥂 Prédictions de scores — Coupe du Monde 2026</Text>
     </Box>
   );
 }
