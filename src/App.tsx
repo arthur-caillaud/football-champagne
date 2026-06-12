@@ -9,6 +9,7 @@ import {
   type Match,
 } from "./fixtures";
 import { formatDate, formatDuration, formatUsd, matchLabel } from "./format";
+import { LOGO } from "./logo";
 import { predictMatch } from "./predict";
 import {
   buildMatchQueue,
@@ -172,10 +173,11 @@ export function App({ footballDataApiKey }: { footballDataApiKey: string }) {
 
 function Header() {
   return (
-    <Box borderStyle="round" borderColor="cyan" paddingX={1}>
+    <Box flexDirection="column">
       <Text bold color="cyan">
-        🥂 Football Champagne — Prédictions Coupe du Monde 2026
+        {LOGO}
       </Text>
+      <Text dimColor>🥂 Prédictions de scores — Coupe du Monde 2026</Text>
     </Box>
   );
 }
