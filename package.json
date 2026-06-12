@@ -1,0 +1,22 @@
+{
+  "name": "football-champagne",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "predict": "bun run src/index.tsx",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "ink": "^7.0.5",
+    "ink-spinner": "^5.0.0",
+    "openai": "latest",
+    "react": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "^19.2.17",
+    "typescript": "latest",
+    "vitest": "latest"
+  }
+}
